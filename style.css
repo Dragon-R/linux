@@ -1,0 +1,12 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    color: light-dark(#1a1a1a, #bebebe);
+    background-color: light-dark(#bebebe, #1a1a1a);
+}
+
+table, th, td {
+    border: 1px solid;
+}

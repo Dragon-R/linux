@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Comandos de Linux</h1>
+    <h2>Primeros pasos</h2>
+    <h3>Aprendiendo a caminar en la terminal</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>ls</td>
+            <td>Lista todas las carpetas y archivos del directorio actual</td>
+        </tr>
+        <tr>
+            <td>ls -l</td>
+            <td>Lista carpetas y archivos con detalles</td>
+        </tr>
+        <tr>
+            <td>ls -d</td>
+            <td>Lista solo carpetas del directorio actual</td>
+        </tr>
+        <tr>
+            <td>ls -lh</td>
+            <td>Lista carpetas y archivos con detalles y tamaño en MB</td>
+        </tr>
+        <tr>
+            <td>cd &lt;directorio&gt;</td>
+            <td>Cambia de directorio, sin parámetros lleva a home</td>
+        </tr>
+        <tr>
+            <td>cd ..</td>
+            <td>Cambia de directorio al padre</td>
+        </tr>
+        <tr>
+            <td>clear</td>
+            <td>Limpiar la consola, tambien se puede limpiar con Ctrl + L</td>
+        </tr>
+        <tr>
+            <td>pwd</td>
+            <td>Muestra el directorio actual</td>
+        </tr>
+        <tr>
+            <td>file &lt;archivo&gt;</td>
+            <td>Muestra el tipo de archivo</td>
+        </tr>
+    </table>
+    <h3>Manipulando archivos y directorios</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>ls -la</td>
+            <td>Lista carpetas y archivos ocultos</td>
+        </tr>
+        <tr>
+            <td>ls -lr</td>
+            <td>Lista carpetas y archivos en orden inverso</td>
+        </tr>
+        <tr>
+            <td>tree</td>
+            <td>Muestra la estructura de directorios</td>
+        </tr>
+        <tr>
+            <td>tree -L &lt;nivel&gt;</td>
+            <td>Muestra la estructura de directorios hasta el nivel especificado</td>
+        </tr>
+        <tr>
+            <td>mkdir &lt;nombre&gt;</td>
+            <td>Crea un directorio con el nombre especificado</td>
+        </tr>
+        <tr>
+            <td>touch &lt;nombre&gt;</td>
+            <td>Crea un archivo con el nombre especificado</td>
+        </tr>
+        <tr>
+            <td>cp &lt;origen&gt; &lt;destino&gt;</td>
+            <td>Copia un archivo o directorio a otro lugar</td>
+        </tr>
+        <tr>
+            <td>mv &lt;origen&gt; &lt;destino&gt;</td>
+            <td>Mueve un archivo o directorio a otro lugar</td>
+        </tr>
+        <tr>
+            <td>rm &lt;archivo&gt;</td>
+            <td>Elimina un archivo, -i para confirmar la eliminación</td>
+        </tr>
+        <tr>
+            <td>rmdir &lt;directorio&gt;</td>
+            <td>Elimina un directorio si está vacío</td>
+        </tr>
+        <tr>
+            <td>rm -r &lt;directorio&gt;</td>
+            <td>Elimina un directorio y su contenido</td>
+        </tr>
+    </table>
+    <h3>Explorando el contenido de nuestros archivos</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>head &lt;archivo&gt;</td>
+            <td>Muestra las primeras líneas de un archivo</td>
+        </tr>
+        <tr>
+            <td>head -n &lt;número&gt; &lt;archivo&gt;</td>
+            <td>Muestra las primeras líneas de un archivo con el número de líneas especificado</td>
+        </tr>
+        <tr>
+            <td>tail &lt;archivo&gt;</td>
+            <td>Muestra las últimas líneas de un archivo</td>
+        </tr>
+        <tr>
+            <td>tail -n &lt;número&gt; &lt;archivo&gt;</td>
+            <td>Muestra las últimas líneas de un archivo con el número de líneas especificado</td>
+        </tr>
+        <tr>
+            <td>less &lt;archivo&gt;</td>
+            <td>Muestra el contenido de un archivo con paginación, / para buscar palabras</td>
+        </tr>
+        <tr>
+            <td>xdg-open &lt;archivo&gt;</td>
+            <td>Abre un archivo con el programa predeterminado, Ctrl + C para salir</td>
+        </tr>
+    </table>
+    <h3>Qué es un comando</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>type &lt;comando&gt;</td>
+            <td>Muestra el tipo de comando</td>
+        </tr>
+        <tr>
+            <td>alias &lt;nombre&gt;&#61;&#34;comando&#34;</td>
+            <td>Crea un alias para un comando</td>
+        </tr>
+        <tr>
+            <td>unalias &lt;nombre&gt;</td>
+            <td>Elimina un alias</td>
+        </tr>
+        <tr>
+            <td>help &lt;comando&gt;</td>
+            <td>Muestra la ayuda de un comando</td>
+        </tr>
+        <tr>
+            <td>man &lt;comando&gt;</td>
+            <td>Muestra el manual de un comando</td>
+        </tr>
+        <tr>
+            <td>whatis &lt;comando&gt;</td>
+            <td>Muestra la definición de un comando</td>
+        </tr>
+        <tr>
+            <td>apropos &lt;palabra&gt;</td>
+            <td>Muestra los comandos que contienen la palabra especificada</td>
+        </tr>
+    </table>
+    <h3>Wildcards</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Muestra todas la coincidencias con cualquier secuencia de caracteres</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>Muestra todas la coincidencias con un solo carácter</td>
+        </tr>
+        <tr>
+            <td>&#91;&#91;&#58;upper&#58;&#93;&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter en mayúscula</td>
+        </tr>
+        <tr>
+            <td>&#91;&#91;&#58;lower&#58;&#93;&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter en minúscula</td>
+        </tr>
+        <tr>
+            <td>&#91;letras&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter en la lista de letras</td>
+        </tr>
+        <tr>
+            <td>&#91;&#91;&#58;alnum&#58;&#93;&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter alfanumérico</td>
+        </tr>
+        <tr>
+            <td>&#91;&#91;&#58;alpha&#58;&#93;&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter alfabético</td>
+        </tr>
+        <tr>
+            <td>&#91;&#91;&#58;digit&#58;&#93;&#93;</td>
+            <td>Muestra todas la coincidencias con cualquier carácter numérico</td>
+        </tr>
+    </table>
+    <h2>Empezando a correr</h2>
+    <h3>Redirecciones&#58; Cómo funciona la shell</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td>Redirecciona la salida de un comando a un archivo</td>
+        </tr>
+        <tr>
+            <td>&gt;&gt;</td>
+            <td>Redirecciona la salida de un comando a un archivo, concatena el contenido del archvio</td>
+        </tr>
+        <tr>
+            <td>2&gt;</td>
+            <td>Redirecciona la salida de un comando a un archivo de error</td>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; > &lt;archivo&gt; 2&gt;&#38;1</td>
+            <td>Redirecciona la salida de un comando a un archivo y la salida de error a otro archivo</td>
+        </tr>
+    </table>
+    <h3>Redirecciones: pipe operator</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>echo &lt;mensaje&gt;</td>
+            <td>Muestra un mensaje en la consola</td>
+        </tr>
+        <tr>
+            <td>cat &lt;archivo&gt;</td>
+            <td>Muestra el contenido de un archivo</td>
+        </tr>
+        <tr>
+            <td>cat &lt;archivo1&gt; &lt;archivo2&gt;</td>
+            <td>Concatena el contenido de dos archivos</td>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; &#124; &lt;comando&gt;</td>
+            <td>Redirecciona la salida de un comando a la entrada de otro comando</td>
+        </tr>
+        <tr>
+            <td>tee &lt;archivo&gt;</td>
+            <td>Crea un archivo con la salida de un comando</td>
+        </tr>
+        <tr>
+            <td>sort</td>
+            <td>Ordena el contenido de un archivo</td>
+        </tr>
+    </table>
+    <h3>Encadenando comandos: operadores de control</h3>
+    <table>
+        <tr>
+            <th>Comando</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; &#59; &lt;comando&gt;</td>
+            <td>Ejecuta dos comandos secuencialmente, síncrona</td>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; &#38; &lt;comando&gt;</td>
+            <td>Ejecuta dos comandos en segundo plano, asíncrona</td>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; &#38;&#38; &lt;comando&gt;</td>
+            <td>Ejecuta dos comando de forma condicional, si ambos son verdaderos</td>
+        </tr>
+        <tr>
+            <td>&lt;comando&gt; &#124;&#124; &lt;comando&gt;</td>
+            <td>Ejecuta dos comando de forma condicional, si uno de ellos es verdadero</td>
+        </tr>
+    </table>
+</body>
+</html>
